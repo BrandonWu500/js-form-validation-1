@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --clr-primary-1: hsl(0, 100%, 74%);
+  --clr-primary-2: hsl(154, 59%, 51%);
+
+  --clr-accent: hsl(248, 32%, 49%);
+
+  --clr-neutral-1: hsl(249, 10%, 26%);
+  --clr-neutral-2: hsl(246, 25%, 77%);
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  padding: 4em 1em;
+  text-align: center;
+}
+
+form {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+input {
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  border: 1px solid var(--clr-neutral-2);
+}
+
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  top: -3.75em;
+  right: 3em;
+}
+
+input::placeholder {
+  font-weight: bold;
+  color: var(--clr-neutral-1);
+}
+
+input:invalid {
+  border: 2px solid var(--clr-primary-1);
+  color: var(--clr-primary-1);
+}
+
+input:invalid + span::before {
+  content: url('../images/icon-error.svg');
+}
+
+.error {
+  display: block;
+  text-align: right;
+  font-size: 0.7rem;
+  color: var(--clr-primary-1);
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+button {
+  background-color: var(--clr-primary-2);
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+aside p {
+  color: var(--clr-neutral-2);
+  font-size: 0.75rem;
+}
