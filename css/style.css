@@ -21,22 +21,47 @@ img {
 
 body {
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: url(../images/bg-intro-mobile.png);
+  background-color: var(--clr-primary-1);
 }
 
 main {
+  max-width: 375px;
+  width: 100%;
   margin: 0 auto;
   padding: 4em 1em;
   text-align: center;
+  color: white;
+  text-align: center;
+}
+
+.form-header {
+  background-color: var(--clr-accent);
+  padding: 1em 2em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  box-shadow: 0 5px 2px rgb(0 0 0 / 0.2);
+}
+
+.form-header p {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 form {
-  border: 3px solid black;
   border-radius: 10px;
   padding: 1em;
+  background-color: white;
+  box-shadow: 0 10px 2px rgb(0 0 0 / 0.2);
 }
 
 input {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--clr-neutral-1);
   width: 90%;
   padding: 1em;
   margin-bottom: 0.5em;
@@ -46,16 +71,17 @@ input {
 
 input + span {
   position: relative;
+  right: 2em;
 }
 
 input + span::before {
   position: absolute;
-  top: -3.75em;
-  right: 3em;
+  top: -4em;
+  right: 2em;
 }
 
 input::placeholder {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--clr-neutral-1);
 }
 
@@ -65,7 +91,7 @@ input:invalid.touched {
 }
 
 input:invalid.touched + span::before {
-  content: url('../images/icon-error.svg');
+  content: url("../images/icon-error.svg");
 }
 
 .error {
@@ -78,6 +104,7 @@ input:invalid.touched + span::before {
 }
 
 button {
+  font-family: inherit;
   background-color: var(--clr-primary-2);
   color: white;
   border: none;
@@ -97,4 +124,48 @@ button:focus {
 aside p {
   color: var(--clr-neutral-2);
   font-size: 0.75rem;
+}
+
+aside a {
+  color: var(--clr-primary-1);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution a {
+  color: var(--clr-accent);
+}
+
+@media (min-width: 1440px) {
+  main {
+    display: flex;
+    max-width: 1240px;
+  }
+  article {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 4em;
+  }
+  article h1 {
+    font-size: 3rem;
+    max-width: 20ch;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+  }
+  .form-wrapper {
+    flex-basis: 100%;
+  }
+  input + span {
+    right: 3em;
+  }
+  input + span::before {
+    top: -4em;
+  }
+  button {
+    width: 90%;
+    letter-spacing: 1px;
+  }
 }

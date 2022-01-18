@@ -25,9 +25,8 @@
       .attribution {
         font-size: 11px;
         text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: white;
+        margin-top: 5rem;
       }
     </style>
   </head>
@@ -41,52 +40,55 @@
           invaluable.
         </p>
       </article>
-      <header class="form-header">
-        <p>Try it free 7 days then $20/mo. thereafter</p>
-      </header>
-      <form action="#" novalidate>
-        <p>
+      <div class="form-wrapper">
+        <header class="form-header">
+          <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+        </header>
+        <form action="#" novalidate>
+          <p>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              required
+              placeholder="First Name"
+            />
+            <span class="error"></span>
+          </p>
           <input
             type="text"
-            id="fname"
-            name="fname"
+            id="lname"
+            name="lname"
             required
-            placeholder="First Name"
+            placeholder="Last Name"
           />
           <span class="error"></span>
-        </p>
-        <input
-          type="text"
-          id="lname"
-          name="lname"
-          required
-          placeholder="Last Name"
-        />
-        <span class="error"></span>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          placeholder="Email Address"
-          pattern="[a-zA-Z]+@host.tld"
-        />
-        <span class="error"></span>
-        <input
-          type="password"
-          name="pwd"
-          id="pwd"
-          required
-          placeholder="Password"
-        />
-        <span class="error"></span>
-        <button type="submit">Claim your free trial</button>
-        <aside>
-          <p>
-            By clicking the button, you are agreeing to our Terms and Services
-          </p>
-        </aside>
-      </form>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Email Address"
+            pattern="[a-zA-Z]+@host.tld"
+          />
+          <span class="error"></span>
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            required
+            placeholder="Password"
+          />
+          <span class="error"></span>
+          <button type="submit">Claim your free trial</button>
+          <aside>
+            <p>
+              By clicking the button, you are agreeing to our
+              <a href="#">Terms and Services</a>
+            </p>
+          </aside>
+        </form>
+      </div>
     </main>
 
     <footer>
