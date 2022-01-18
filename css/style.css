@@ -55,16 +55,16 @@ input + span::before {
 }
 
 input::placeholder {
-  font-weight: bold;
+  font-weight: 700;
   color: var(--clr-neutral-1);
 }
 
-input:invalid {
+input:invalid.touched {
   border: 2px solid var(--clr-primary-1);
   color: var(--clr-primary-1);
 }
 
-input:invalid + span::before {
+input:invalid.touched + span::before {
   content: url('../images/icon-error.svg');
 }
 
